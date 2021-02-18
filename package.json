@@ -1,7 +1,7 @@
 {
   "name": "@teqfw/ui-quasar",
   "version": "0.1.0",
-  "description": "TeqFW: module description.",
+  "description": "TeqFW: base module to use Quasar UI components in teq-plugins.",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -23,7 +23,8 @@
   },
   "homepage": "https://github.com/teqfw/ui-quasar#readme",
   "dependencies": {
-    "@teqfw/vue": "github:teqfw/vue"
+    "@teqfw/vue": "github:teqfw/vue",
+    "quasar": "^2.0.0-beta.5"
   },
   "teqfw": {
     "autoload": {
