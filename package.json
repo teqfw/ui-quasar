@@ -25,11 +25,5 @@
   "dependencies": {
     "@teqfw/vue": "github:teqfw/vue",
     "quasar": "^2.0.0-beta.5"
-  },
-  "teqfw": {
-    "autoload": {
-      "ns": "TeqFw_Ui_Quasar",
-      "path": "./src"
-    }
   }
 }
