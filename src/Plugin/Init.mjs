@@ -6,7 +6,7 @@ export default class TeqFw_Ui_Quasar_Plugin_Init {
 
     constructor(spec) {
         /** @type {TeqFw_Ui_Quasar_Defaults} */
-        const DEF = spec['TeqFw_Ui_Quasar_Defaults$'];    // instance singleton
+        const DEF = spec['TeqFw_Ui_Quasar_Defaults$'];    // singleton
 
         this.getCommands = function () {
             return [];
