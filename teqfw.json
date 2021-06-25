@@ -2,5 +2,10 @@
   "autoload": {
     "ns": "TeqFw_Ui_Quasar",
     "path": "./src"
+  },
+  "http2": {
+    "statics": {
+      "/quasar/": "/quasar/dist/"
+    }
   }
 }
