@@ -7,5 +7,10 @@
     "statics": {
       "/quasar/": "/quasar/dist/"
     }
+  },
+  "web": {
+    "statics": {
+      "/quasar/": "/quasar/dist/"
+    }
   }
 }
