@@ -3,11 +3,6 @@
     "ns": "TeqFw_Ui_Quasar",
     "path": "./src"
   },
-  "http2": {
-    "statics": {
-      "/quasar/": "/quasar/dist/"
-    }
-  },
   "web": {
     "statics": {
       "/quasar/": "/quasar/dist/"
