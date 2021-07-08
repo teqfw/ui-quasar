@@ -1,7 +1,9 @@
 {
-  "autoload": {
-    "ns": "TeqFw_Ui_Quasar",
-    "path": "./src"
+  "di": {
+    "autoload": {
+      "ns": "TeqFw_Ui_Quasar",
+      "path": "./src"
+    }
   },
   "web": {
     "statics": {
