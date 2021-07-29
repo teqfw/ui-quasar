@@ -1,7 +1,7 @@
 {
   "name": "@teqfw/ui-quasar",
   "version": "0.1.0",
-  "description": "TeqFW: base module to use Quasar UI components in teq-plugins.",
+  "description": "TeqFW: the wrap package to use Quasar UI components in teq-plugins.",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,11 +10,15 @@
     "url": "git+https://github.com/teqfw/ui-quasar.git"
   },
   "keywords": [
-    "pet",
-    "project",
-    "hobby",
-    "web",
-    "applications"
+    "ecmascript 2015",
+    "es6+",
+    "pwa",
+    "quasar ui",
+    "quasar",
+    "spa",
+    "teqfw",
+    "tequila framework",
+    "web applications"
   ],
   "author": "Alex Gusev <alex@flancer64.com>",
   "license": "AGPL-3.0-only",
@@ -23,7 +27,7 @@
   },
   "homepage": "https://github.com/teqfw/ui-quasar#readme",
   "dependencies": {
-    "@teqfw/vue": "github:teqfw/vue",
-    "quasar": "^2.0.0-beta.5"
+    "@teqfw/vue": "*",
+    "quasar": "^2"
   }
 }

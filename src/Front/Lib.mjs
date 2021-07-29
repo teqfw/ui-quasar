@@ -2,9 +2,9 @@
  * DI-compatible wrapper for 'vue' library.
  * 'vue' library does not compatible with DI-container and should be loaded on front with HTML '<script>' tag.
  *
- * @namespace TeqFw_Quasar_Front_Lib
+ * @namespace TeqFw_Ui_Quasar_Front_Lib
  */
-export default class TeqFw_Quasar_Front_Lib {
+export default class TeqFw_Ui_Quasar_Front_Lib {
     #quasar;
 
     constructor() {
