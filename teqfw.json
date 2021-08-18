@@ -1,11 +1,11 @@
 {
-  "di": {
+  "@teqfw/di": {
     "autoload": {
       "ns": "TeqFw_Ui_Quasar",
       "path": "./src"
     }
   },
-  "web": {
+  "@teqfw/web": {
     "statics": {
       "/quasar/": "/quasar/dist/"
     }
