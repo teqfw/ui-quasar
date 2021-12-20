@@ -1,6 +1,6 @@
 {
   "name": "@teqfw/ui-quasar",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "TeqFW: the wrap package to use Quasar UI components in teq-plugins.",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
