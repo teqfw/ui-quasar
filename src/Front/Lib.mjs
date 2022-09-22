@@ -14,6 +14,18 @@ Add
 to your startup HTML to use Quasar UI.           
 `);
 }
+
+//
+/**
+ * {@link https://next.quasar.dev/vue-components/dialog#qdialog-api QDialog API}
+ * @typedef TeqFw_Ui_Quasar_Front_Lib.QDialog
+ * @method focus
+ * @method hide
+ * @method shake
+ * @method show
+ * @method toggle
+ */
+
 // export corresponds to Quasar UI v. 2.3.3:
 export const {
     AddressbarColor,
