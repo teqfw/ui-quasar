@@ -2,6 +2,7 @@
  * Wrap Quasar UI library to use as ES6 module in TeqFW on the front.
  *
  * @namespace TeqFw_Ui_Quasar_Front_Lib
+ * TODO: rename to _Ext (as in vue-plugin)
  */
 if (window.Quasar === undefined) {
     throw new Error(`
