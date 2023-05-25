@@ -46,6 +46,9 @@ export default class TeqFw_Ui_Quasar_Front_Mod_Server_Connect_State {
             }
         };
 
-
+        // MAIN
+        window.addEventListener('offline', this.setOffline);
+        window.addEventListener('online', this.setOnline);
+        if (navigator.onLine) this.setOnline();
     }
 }
