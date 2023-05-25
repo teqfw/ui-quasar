@@ -3,6 +3,9 @@
     "autoload": {
       "ns": "TeqFw_Ui_Quasar",
       "path": "./src"
+    },
+    "replace": {
+      "TeqFw_Web_Front_Api_Mod_Server_Connect_IState": {"front": "TeqFw_Ui_Quasar_Front_Mod_Server_Connect_State"}
     }
   },
   "@teqfw/web": {
