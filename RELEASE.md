@@ -1,5 +1,10 @@
 # @teqfw/ui-quasar: releases
 
+# 0.4.1
+
+* Led indicator widget for backend connection.
+* `TeqFw_Ui_Quasar_Shared_Defaults`.
+
 # 0.4.0
 
 * Add `Defauls` to `Front`.
