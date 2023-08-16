@@ -16,12 +16,15 @@ const Q_COLOR_AJAX = 'lime';
  *
  * @returns {TeqFw_Ui_Quasar_Front_Lib_Led_Connect.vueCompTmpl}
  */
-export default function (spec) {
-    /** @type {TeqFw_Ui_Quasar_Front_Defaults} */
-    const DEF = spec['TeqFw_Ui_Quasar_Front_Defaults$'];
-    /** @type {TeqFw_Ui_Quasar_Front_Mod_Server_Connect_State} */
-    const modState = spec['TeqFw_Web_Front_Api_Mod_Server_Connect_IState$']; // as interface
-
+/**
+ * @param {TeqFw_Ui_Quasar_Front_Defaults} DEF
+ * @param {TeqFw_Ui_Quasar_Front_Mod_Server_Connect_State} modState -  as interface
+ */
+export default function (
+    {
+        TeqFw_Ui_Quasar_Front_Defaults$: DEF,
+        TeqFw_Web_Front_Api_Mod_Server_Connect_IState$: modState,
+    }) {
     // VARS
     const _refActive = modState.getRefActive();
     const _refOnline = modState.getRefOnline();

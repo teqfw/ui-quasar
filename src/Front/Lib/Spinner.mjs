@@ -12,10 +12,13 @@ const NS = 'TeqFw_Ui_Quasar_Front_Lib_Spinner';
  *
  * @returns {TeqFw_Ui_Quasar_Front_Lib_Spinner.vueCompTmpl}
  */
-export default function (spec) {
-    /** @type {TeqFw_Ui_Quasar_Front_Defaults} */
-    const DEF = spec['TeqFw_Ui_Quasar_Front_Defaults$'];
-
+/**
+ * @param {TeqFw_Ui_Quasar_Front_Defaults} DEF
+ */
+export default function (
+    {
+        TeqFw_Ui_Quasar_Front_Defaults$: DEF,
+    }) {
     // VARS
     const template = `
 <q-inner-loading :showing="loading">

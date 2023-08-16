@@ -4,11 +4,13 @@
  * @implements TeqFw_Web_Front_Api_Mod_Server_Connect_IState
  */
 export default class TeqFw_Ui_Quasar_Front_Mod_Server_Connect_State {
-    constructor(spec) {
-        // DEPS
-        /** @type {TeqFw_Vue_Front_Ext_Vue.ref|function} */
-        const ref = spec['TeqFw_Vue_Front_Ext_Vue.ref'];
-
+    /**
+     * @param {TeqFw_Vue_Front_Ext_Vue.ref|function} ref
+     */
+    constructor(
+        {
+            ['TeqFw_Vue_Front_Ext_Vue.ref']: ref,
+        }) {
         // VARS
         let _online = ref(false);
         let _active = ref(false);

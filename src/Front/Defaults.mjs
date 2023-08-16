@@ -8,9 +8,16 @@ export default class TeqFw_Ui_Quasar_Front_Defaults {
     /** @type {TeqFw_Ui_Quasar_Shared_Defaults} */
     SHARED;
 
-    constructor(spec) {
+    /**
+     * @param {TeqFw_Ui_Quasar_Shared_Defaults} SHARED
+     */
+    constructor(
+        {
+            TeqFw_Ui_Quasar_Shared_Defaults$: SHARED,
+        }
+    ) {
         // DEPS
-        this.SHARED = spec['TeqFw_Ui_Quasar_Shared_Defaults$'];
+        this.SHARED = SHARED;
 
         // MAIN
         Object.freeze(this);
