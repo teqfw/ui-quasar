@@ -1,8 +1,7 @@
 /**
  * Wrap Quasar UI library to use as ES6 module in TeqFW on the front.
  *
- * @namespace TeqFw_Ui_Quasar_Front_Lib
- * @deprecated use TeqFw_Ui_Quasar_Front_Ext
+ * @namespace TeqFw_Ui_Quasar_Front_Ext
  */
 if (window.Quasar === undefined) {
     throw new Error(`
@@ -19,7 +18,7 @@ to your startup HTML to use Quasar UI.
 //
 /**
  * {@link https://next.quasar.dev/vue-components/dialog#qdialog-api QDialog API}
- * @typedef TeqFw_Ui_Quasar_Front_Lib.QDialog
+ * @typedef TeqFw_Ui_Quasar_Front_Ext.QDialog
  * @method focus
  * @method hide
  * @method shake

@@ -20,6 +20,6 @@ This plugin uses `TeqFw_Ui_Quasar` namespace.
 Load functionality with TeqFW DI:
 
 ```javascript
-const quasar = spec['TeqFw_Ui_Quasar_Front_Lib'];
+const quasar = spec['TeqFw_Ui_Quasar_Front_Ext'];
 const ver = quasar.version;
 ```
