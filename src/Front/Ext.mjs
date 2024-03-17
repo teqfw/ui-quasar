@@ -3,18 +3,47 @@
  *
  * @namespace TeqFw_Ui_Quasar_Front_Ext
  */
-if (window.Quasar === undefined) {
-    throw new Error(`
-Add
 
-<script type="application/javascript" src="./src/quasar/quasar.umd.prod.js"></script>
-<script type="application/javascript" src="./src/quasar/icon-set/svg-material-icons.umd.prod.js"></script>
-<link rel="stylesheet" href="./src/quasar/quasar.prod.css">
-
-to your startup HTML to use Quasar UI.           
-`);
+// MODULE'S FUNCS
+/**
+ * Load UMD script from the back and execute it.
+ * @param {string} url
+ * @return {Promise}
+ */
+async function loadUmd(url) {
+    return new Promise((resolve, reject) => {
+        // Create a script element
+        const script = document.createElement('script');
+        script.src = url;
+        script.onload = () => resolve();
+        script.onerror = (error) => reject(error);
+        document.head.appendChild(script);
+    });
 }
 
+/**
+ * Load CSS script from the back and add it to the DOM.
+ * @param url
+ * @return {Promise}
+ */
+async function loadCss(url) {
+    return new Promise((resolve, reject) => {
+        const link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = url;
+        link.onload = () => resolve();
+        link.onerror = (error) => reject(error);
+        document.head.appendChild(link);
+    });
+}
+
+// MODULE'S MAIN
+if (!window.Quasar) {
+    await loadUmd('../../../../src/quasar/quasar.umd.prod.js');
+    await loadUmd('../../../../src/quasar/icon-set/svg-material-icons.umd.prod.js');
+    await loadCss('../../../../src/quasar/quasar.prod.css');
+}
 //
 /**
  * {@link https://next.quasar.dev/vue-components/dialog#qdialog-api QDialog API}
@@ -26,185 +55,5 @@ to your startup HTML to use Quasar UI.
  * @method toggle
  */
 
-// export corresponds to Quasar UI v. 2.3.3:
-export const {
-    AddressbarColor,
-    AppFullscreen,
-    AppVisibility,
-    BottomSheet,
-    clone,
-    ClosePopup,
-    colors,
-    Cookies,
-    copyToClipboard,
-    createMetaMixin,
-    createUploaderComponent,
-    Dark,
-    date,
-    debounce,
-    Dialog,
-    dom,
-    event,
-    exportFile,
-    extend,
-    format,
-    frameDebounce,
-    getCssVar,
-    iconSet,
-    install,
-    Intersection,
-    lang,
-    Loading,
-    LoadingBar,
-    LocalStorage,
-    Meta,
-    Morph,
-    morph,
-    Mutation,
-    noop,
-    Notify,
-    openURL,
-    patterns,
-    Platform,
-    QAjaxBar,
-    QAvatar,
-    QBadge,
-    QBanner,
-    QBar,
-    QBreadcrumbs,
-    QBreadcrumbsEl,
-    QBtn,
-    QBtnDropdown,
-    QBtnGroup,
-    QBtnToggle,
-    QCard,
-    QCardActions,
-    QCardSection,
-    QCarousel,
-    QCarouselControl,
-    QCarouselSlide,
-    QChatMessage,
-    QCheckbox,
-    QChip,
-    QCircularProgress,
-    QColor,
-    QDate,
-    QDialog,
-    QDrawer,
-    QEditor,
-    QExpansionItem,
-    QFab,
-    QFabAction,
-    QField,
-    QFile,
-    QFooter,
-    QForm,
-    QFormChildMixin,
-    QHeader,
-    QIcon,
-    QImg,
-    QInfiniteScroll,
-    QInnerLoading,
-    QInput,
-    QIntersection,
-    QItem,
-    QItemLabel,
-    QItemSection,
-    QKnob,
-    QLayout,
-    QLinearProgress,
-    QList,
-    QMarkupTable,
-    QMenu,
-    QNoSsr,
-    QOptionGroup,
-    QPage,
-    QPageContainer,
-    QPageScroller,
-    QPageSticky,
-    QPagination,
-    QParallax,
-    QPopupEdit,
-    QPopupProxy,
-    QPullToRefresh,
-    QRadio,
-    QRange,
-    QRating,
-    QResizeObserver,
-    QResponsive,
-    QRouteTab,
-    QScrollArea,
-    QScrollObserver,
-    QSelect,
-    QSeparator,
-    QSkeleton,
-    QSlideItem,
-    QSlider,
-    QSlideTransition,
-    QSpace,
-    QSpinner,
-    QSpinnerAudio,
-    QSpinnerBall,
-    QSpinnerBars,
-    QSpinnerBox,
-    QSpinnerClock,
-    QSpinnerComment,
-    QSpinnerCube,
-    QSpinnerDots,
-    QSpinnerFacebook,
-    QSpinnerGears,
-    QSpinnerGrid,
-    QSpinnerHearts,
-    QSpinnerHourglass,
-    QSpinnerInfinity,
-    QSpinnerIos,
-    QSpinnerOrbit,
-    QSpinnerOval,
-    QSpinnerPie,
-    QSpinnerPuff,
-    QSpinnerRadio,
-    QSpinnerRings,
-    QSpinnerTail,
-    QSplitter,
-    QStep,
-    QStepper,
-    QStepperNavigation,
-    QTab,
-    QTable,
-    QTabPanel,
-    QTabPanels,
-    QTabs,
-    QTd,
-    QTh,
-    QTime,
-    QTimeline,
-    QTimelineEntry,
-    QToggle,
-    QToolbar,
-    QToolbarTitle,
-    QTooltip,
-    QTr,
-    QTree,
-    QUploader,
-    QUploaderAddTrigger,
-    QVideo,
-    QVirtualScroll,
-    Ripple,
-    Screen,
-    Scroll,
-    scroll,
-    ScrollFire,
-    SessionStorage,
-    setCssVar,
-    throttle,
-    TouchHold,
-    TouchPan,
-    TouchRepeat,
-    TouchSwipe,
-    uid,
-    useDialogPluginComponent,
-    useFormChild,
-    useMeta,
-    useQuasar,
-    version,
-} = window.Quasar;
+const Quasar = window.Quasar;
+export {Quasar as default} ;
