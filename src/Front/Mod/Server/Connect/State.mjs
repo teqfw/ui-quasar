@@ -5,13 +5,15 @@
  */
 export default class TeqFw_Ui_Quasar_Front_Mod_Server_Connect_State {
     /**
-     * @param {TeqFw_Vue_Front_Ext_Vue.ref|function} ref
+     * @param {TeqFw_Vue_Front_Ext_Vue} extVue
      */
     constructor(
         {
-            ['TeqFw_Vue_Front_Ext_Vue.ref']: ref,
-        }) {
+            TeqFw_Vue_Front_Ext_Vue: extVue,
+        }
+    ) {
         // VARS
+        const ref = extVue.Vue.ref;
         let _online = ref(false);
         let _active = ref(false);
         /**
