@@ -1,5 +1,9 @@
 # @teqfw/ui-quasar: releases
 
+## 0.21.0
+
+* Use Ext instead of Lib.
+
 ## 0.20.0
 
 * These changes are related to the new architecture of the `@teqfw/di` package.
