@@ -6,7 +6,9 @@
       "ext": "mjs"
     },
     "replaces": {
-      "TeqFw_Web_Front_Api_Mod_Server_Connect_IState": {"front": "TeqFw_Ui_Quasar_Front_Mod_Server_Connect_State"}
+      "front": {
+        "TeqFw_Web_Front_Api_Mod_Server_Connect_IState": "TeqFw_Ui_Quasar_Front_Mod_Server_Connect_State"
+      }
     }
   },
   "@teqfw/web": {
